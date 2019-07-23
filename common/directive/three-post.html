@@ -1,0 +1,29 @@
+<article>
+    <div class="news-container news-paragraf news-index-page">
+        <div style="float:left; padding-bottom: 30px; font-family:'Open Sans', sans-serif;" class="col-md-4 col-sm-12 col-xs-12 index-news-box">
+            <div class="news-category"><a style="cursor: normal;">{{post.categories[0].title}}</a></div>
+            <div>
+                <h2 class="news-title"><a ng-href="post.html#!/?categoryID={{post.categories[0].id}}&postID={{post.id}}" class="topic-text-index" style="font-family:'Open Sans', sans-serif"><div class="main_page_post_title">{{post.title}}</div></a></h2>
+                <center>
+                    <div class="news-date" style="width:60px; height: 18px; overflow: hidden;">{{post.date}}</div>
+                </center>
+                <div class="news-image main_post_img" style="max-height: 300px;">
+                    <a ng-href="post.html#!/?categoryID={{post.categories[0].id}}&postID={{post.id}}">
+                        <img ng-src="{{post.thumbnail_images.full.url}}" /></a>
+                </div>
+                
+                <p style="word-wrap: break-word;" ng-bind-html="post.content" class="news-entry main_page_news col-md-12 paragraph-lenght">{{post}}</p> &nbsp
+                
+                <div class="news-footer">
+                    <ul>
+                        <li><i class="fa fa-fire"></i> Autor: {{post.author.nickname}}</li>
+                        <li><i class="fa fa-clock-o"></i>&nbsp
+                            <p style="float:right;" class="time-for-reading">Czytanie ~{{post.readtime}} min.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- .news-container -->
+        </div>
+    </div>
+</article>

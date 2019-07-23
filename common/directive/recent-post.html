@@ -1,0 +1,28 @@
+<div class="col-md-5">
+    <div style=" height: 325px; overflow: hidden;" class="recent-post-images">
+        <img style="max-width:130% !important; height: auto !important;" ng-src="{{post.thumbnail_images.full.url}}" />
+    </div>
+</div>
+<!-- .col-md-6 -->
+<div class="col-md-7">
+    <div class="news-container news-list recent-post-list">
+        <span class="news-category"><a style="cursor: normal; color: #080b0e; font-family: 'Open Sans', sans-serif !important;">{{post.categories[0].title}}</a></span>
+        <h2 class="news-title"><a ng-href="post.html#!/?categoryID={{post.categories[0].id}}&postID={{post.id}}" style="color: #080b0e; font-family: 'Open Sans', sans-serif !important;">{{post.title}}</a></h2>
+        <span class="news-date news-date-mobile">{{post.date}}</span><span id="posts_value">{{count_total}}</span>
+
+        <div class="col-md-6 recent-post-images-mobile">
+            <div style=" height: 325px; overflow: hidden;">
+                <img class="img-mobile-recent-posts" ng-src="{{post.thumbnail_images.full.url}}" />
+            </div>
+        </div>
+
+        <div class="news-entry main_page_news paragraph-lenght" ng-bind-html="post.content" style="max-height: 143px; overflow:hidden; text-align: left;word-wrap: break-word;">
+            <p class="paragraph-lenght">{{post.content}}</p>
+        </div>
+        <hr>
+        <span class="Author-name-mobile"><i class="fa fa-fire"></i> Autor: {{post.author.nickname}}</span>
+        <div style="float:right;"><i class="fa fa-clock-o"></i>&nbsp<span class="time-for-reading">Czytanie ~{{post.readtime}} min.</span></div>
+        <!-- .news-entry -->
+    </div>
+    <!-- .news-container -->
+</div>

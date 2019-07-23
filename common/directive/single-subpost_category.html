@@ -1,0 +1,23 @@
+    <div class="col-md-6">
+        <article>
+            <div class="news-container">
+                <h2 class="news-title"><a style="color: #2b2b2b" onclick="refresh()" ng-href="post.html#!/?categoryID={{post.categories[0].id}}&postID={{post.id}}">{{post.title}}</a></h2> 
+                <span class="news-date">{{post.date}}</span>
+                <div class="news-image" style="height: 200px; overflow: hidden; ">
+                    <img ng-src="{{post.thumbnail_images.full.url}}" alt="" style="position: relative; top: -70px;">
+                </div>
+                <div class="news-entry">
+                    <p ng-bind-html="post.content" style="height:200px; overflow:hidden; word-wrap: break-word;" class="paragraph-lenght">{{post.content}}</p>
+                </div>
+                <br>
+            <div class="news-footer">
+                <ul>
+                    <li><i class="fa fa-fire"></i> Autor: {{post.author.nickname}}</li>
+                    <li><i class="fa fa-clock-o"></i><span  class="time-for-reading">Czytanie ~{{post.readtime}} min.</span></li>
+                </ul>
+            </div>
+
+            </div>
+        </article>
+    </div>
+

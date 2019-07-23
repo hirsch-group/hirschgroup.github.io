@@ -1,0 +1,13 @@
+<form>
+    <div class="form-search">
+        <div class="input-group ContactPageInput">
+            <input type="text" name="q" size="21" maxlength="40" class="quick-search-text-input " ng-model="selected" uib-typeahead="obj for obj in sendData($viewValue, 'pl')" typeahead-template-url="../common/modules/searchModule/js/directive/searchBoxResults.html" autocomplete="off" typeahead-no-results="noResults" typeahead-wait-ms="200" typeahead-min-length="3" value="text">
+            <div ng-show="noResults" style="position: absolute;">
+                <i class="glyphicon glyphicon-remove"></i> No Results Found
+            </div>
+            <span class="input-group-btn">
+                <button ng-click="goToFullSearch(selected, 'pl')" class="search-button"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </span>
+        </div>
+    </div>
+</form>

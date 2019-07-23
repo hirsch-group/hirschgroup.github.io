@@ -1,0 +1,16 @@
+<a ng-if='match.model.postID != undefined' href="/pl/post.html#!/?categoryID=XYZ&postID={{match.model.postID}}">
+<!-- <div ng-if="match.model != 2"> -->
+    <h5 ng-if='match.model.nameWP == undefined' style="color: #337ab7">{{match.model.name}}</h5>
+    <h5 style="color: #3060b0"><div>{{match.model.nameWP}}</div></h5> 
+    <div ng-bind-html="match.model.content | sanitize">{{match.model.content}}</div>
+<!-- </div> -->
+</a>
+<a ng-if='match.model.postID == undefined' href="/pl/{{match.model.name}}.html">
+<!-- <div ng-if="match.model != 2"> -->
+    <h5 ng-if='match.model.nameWP == undefined' style="color: #337ab7">{{match.model.name}}</h5>
+    <h5 style="color: #3060b0"><div>{{match.model.nameWP}}</div></h5> 
+    <div ng-bind-html="match.model.content | sanitize">{{match.model.content}}</div>
+<!-- </div> -->
+</a>
+
+

@@ -1,0 +1,6 @@
+<div ng-if="result != 2">
+    <h3 ng-if='result.nameWP == undefined'> <a href="{{pageURL}}{{result.name}}.html" style="color: #337ab7">
+    {{result.name}}</a></h3>
+    <h3> <a href="/pl/post.html#!/?categoryID=XYZ&postID={{result.postID}}">{{result.nameWP}}</a></h3><span ng-bind-html="result.content | sanitize">...{{result.content}}...</span>
+</div>
+<br />
